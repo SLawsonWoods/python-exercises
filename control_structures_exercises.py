@@ -84,5 +84,7 @@ for n in range(10):
 ##22
 ##333
 ##4444
-for n in range(1:10):
-    print(n)
+for n in range(1, 10):
+    print(int(n))
+    int(n) *= n
+    
