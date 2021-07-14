@@ -88,13 +88,30 @@ for n in range(1, 10):
 ## c. break and continue
 ## Prompt the user for an odd number between 1 and 50. Use a loop and a break 
 ## statement to continue prompting the user if they enter invalid input. 
-##(Hint: use the isdigit method on strings to determine this). Use a loop and 
-## the continue statement to output all the odd numbers between 1 and 50, 
+##(Hint: use the isdigit method on strings to determine this). 
+## Use a loop and the continue statement to output all the odd numbers between 1 and 50, 
 ## except for the number the user entered.
 ## Your output should look like this:
 ## Number to skip is: 27
 ## Here is an odd number: 1
 ## Here is an odd number: 3
+
+while True:
+    user_input4 = input('Please input an odd number between 1 and 50:  ')
+    if user_input4.isnumeric():
+        user_input4 = int(user_input4)       
+    else:
+        print('This is not a number, please input a number')
+        continue
+    if user_input4 < 1 or user_input4 > 50:
+        print('Your number needs to be in the range 1-50')
+    elif user_input4 % 2 == 0:
+        print('Please enter an odd number')
+    else:
+        break
+
+print(user_input4)
+
 #%%
 ## d. Prompt the user to enter a positive number and write a loop that counts 
 ## from 0 to that number. 
@@ -112,7 +129,6 @@ user_input2 = int(input('Please enter a postive whole number.'))
 n = user_input2
 for n in range(user_input2,0,-1):
     print(n)
-    n -= 1
 #%%
 ## 3 Fizzbuzz
 ## Write a program that prints the numbers from 1 to 100.
