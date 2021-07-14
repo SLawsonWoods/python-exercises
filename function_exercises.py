@@ -66,10 +66,22 @@ print(calculate_tip(bill, tip_rate))
 ## price, and a discount percentage, and return the price after the discount 
 ## is applied.
 
-def apply_discount(sticker_price, discount_value):
-    sticker_priice = 10
-    discount_value = .25
-    total = (sticker_price * discount_value)
-    
-    
-    
+def apply_discount(sticker_price, discount_value):          # defining the function apply discount
+    sticker_price = 10                                     # setting variable for first parameter to a number
+    discount_value = .25                                    # setting variable for second parameter to a number
+    total = sticker_price - (sticker_price * discount_value)    
+    return total                                            # total equals the sticker_price multiplied by the
+
+print(total)                                                       # discount_value all subtracted from the sticker_price
+#%%
+## 7. Define a function named handle_commas. It should accept a string that is a number that contains commas 
+## in it as input, and return a number as output.
+
+# define handle_commas
+# use a function to remove commas from number
+def handle_commas(number):
+    number_without_commas = number.replace(number, int)
+    return number_without_commas
+
+number = 1,000,000
+handle_commas(number)
