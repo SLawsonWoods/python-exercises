@@ -147,7 +147,7 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "6923ed6b",
+   "id": "a4b468b1",
    "metadata": {},
    "outputs": [
     {
@@ -170,7 +170,7 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "0a66d2db",
+   "id": "488c45eb",
    "metadata": {},
    "outputs": [
     {
@@ -194,10 +194,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "id": "2adf4cee",
+   "execution_count": 16,
+   "id": "fa4b605d",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[False, False, True, False, False, True, False, False, False, True, True, True, False, True, True, False, False, True, True]\n"
+     ]
+    }
+   ],
    "source": [
     "print(user_status)"
    ]
@@ -205,7 +213,7 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "7ff41681",
+   "id": "ab107559",
    "metadata": {},
    "outputs": [
     {
@@ -230,7 +238,7 @@
   {
    "cell_type": "code",
    "execution_count": 9,
-   "id": "c8155e62",
+   "id": "69d26585",
    "metadata": {},
    "outputs": [
     {
@@ -245,7 +253,6 @@
     "## D. Grand total of balances for all users\n",
     "\n",
     "# retrieve the individual balance for each user\n",
-    "# convert string to integer\n",
     "# add together the balances to find the total\n",
     "\n",
     "indiv_balance = [individual['balance'] for individual in data]\n",
@@ -254,47 +261,36 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
-   "id": "46752c8c",
+   "execution_count": 29,
+   "id": "4dc3cc7a",
    "metadata": {},
    "outputs": [
     {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "False\n",
-      "False\n",
-      "True\n",
-      "Lala\n",
-      "1.0\n"
-     ]
-    },
-    {
-     "ename": "NameError",
-     "evalue": "name 'total' is not defined",
+     "ename": "SyntaxError",
+     "evalue": "EOL while scanning string literal (<ipython-input-29-af41c60d732d>, line 4)",
      "output_type": "error",
      "traceback": [
-      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
-      "\u001b[0;32m<ipython-input-12-8c836f4b3a4a>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0;31m# remove commas\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 4\u001b[0;31m \u001b[0;32mfrom\u001b[0m \u001b[0mfunction_exercises\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mhandle_commas\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      5\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfunction_exercises\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mhandle_commas\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mindiv_balance\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-      "\u001b[0;32m~/codeup-data-science/python-exercises/function_exercises.py\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m     73\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mtotal\u001b[0m                                            \u001b[0;31m# total equals the sticker_price multiplied by the\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     74\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 75\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mtotal\u001b[0m\u001b[0;34m)\u001b[0m                                                       \u001b[0;31m# discount_value all subtracted from the sticker_price\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     76\u001b[0m \u001b[0;31m#%%\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     77\u001b[0m \u001b[0;31m## 7. Define a function named handle_commas. It should accept a string that is a number that contains commas\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-      "\u001b[0;31mNameError\u001b[0m: name 'total' is not defined"
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-29-af41c60d732d>\"\u001b[0;36m, line \u001b[0;32m4\u001b[0m\n\u001b[0;31m    indiv_balance = indiv_balance.replace('$'','')\u001b[0m\n\u001b[0m                                                  ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m EOL while scanning string literal\n"
      ]
     }
    ],
    "source": [
     "# remove dollar signs\n",
+    "def clean_number(indiv_balance):\n",
+    "# remove dollar signs\n",
+    "    indiv_balance = indiv_balance.replace('$'','')\n",
     "# remove commas\n",
+    "    indiv_balance = indiv_balance.replace(',', '')\n",
+    "# convert string to float\n",
+    "    return float(indiv_balance)\n",
     "\n",
-    "from function_exercises import handle_commas\n",
-    "\n",
-    "print(function_exercises.handle_commas(indiv_balance))\n"
+    "print clean_number(indiv_balance)\n"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "3a483ec3",
+   "id": "68506502",
    "metadata": {},
    "outputs": [],
    "source": []

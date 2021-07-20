@@ -169,8 +169,22 @@ for n in range(1,101):
 ## 4 Display a table of powers.
 ## Prompt the user to enter an integer.
 
-user_input3 = int(input("Please enter a whole number."))
 
-## Display a table of squares and cubes from 1 to the value entered.
+# create continue loop
+while True:
+      
+    print("Do you wish to continue? (y/n)")
+    persist = input()
     
+    if persist.lower() == 'y':
         
+        print("This will be the display table loop")
+        
+    elif persist.lower() == 'n':
+        
+        break
+        
+    else:
+        
+        continue
+#%%
